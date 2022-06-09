@@ -13,7 +13,7 @@ function Form({setState}) {
         <div className="Form">
             <div className="box">
                 <input type="text" onChange={hello}></input>
-                <button onClick={() => setState(textFeild)}>Add ToDo</button>
+                <button type="submite" onClick={() => setState(textFeild)}>Add ToDo</button>
             </div>
         </div>
     );
