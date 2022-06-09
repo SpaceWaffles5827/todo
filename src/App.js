@@ -5,17 +5,20 @@ import TodoList from "./TodoList";
 
 
 function App() {
-  let [todos,setTodos] = useState([{text: "this is a todo"}])
+  let [todos,setTodos] = useState([])
 
   function setState(newTodo){
-    // console.log(newTodo)
-    setTodos([{text:newTodo},...todos])
+    setTodos([{text:newTodo, index: todos.length},...todos])
+  }
+
+  function deleteTodo(id){
+    console.log(id)
   }
 
   return (
     <div className="App">
       <Form setState={setState}></Form>
-      <TodoList todos={todos}></TodoList>
+      <TodoList todos={todos} deleteTodo={deleteTodo}></TodoList>
     </div>
   );
 }

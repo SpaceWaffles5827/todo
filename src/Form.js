@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Form.css"
 
 function Form({setState}) {
 
@@ -10,8 +11,10 @@ function Form({setState}) {
 
     return (
         <div className="Form">
-            <input type="text" onChange={hello}></input>
-            <button onClick={() => setState(textFeild)}>test</button>
+            <div className="box">
+                <input type="text" onChange={hello}></input>
+                <button onClick={() => setState(textFeild)}>Add ToDo</button>
+            </div>
         </div>
     );
 }

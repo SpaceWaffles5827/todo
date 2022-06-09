@@ -1,13 +1,16 @@
 import Todo from "./Todo";
+import "./TodoList.css"
 
-function TodoList({todos}) {
+function TodoList({todos, deleteTodo}) {
 
 
   return (
     <div className="TodoList">
-      {todos.map((todo) => (
-          <Todo text={todo.text}></Todo>
-      ))}
+        <div className="box">
+            {todos.map((todo) => (
+                <Todo text={todo.text} deleteTodo={deleteTodo} index={todo.index}></Todo>
+            ))}
+        </div>
     </div>
   );
 }
