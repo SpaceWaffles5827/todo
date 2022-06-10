@@ -6,7 +6,7 @@ function TodoList({todos, deleteTodo}) {
 
   return (
     <div className="TodoList">
-        <div className="box">
+        <div className="ListBox">
             {todos.map((todo) => (
                 <Todo text={todo.text} deleteTodo={deleteTodo} index={todo.index}></Todo>
             ))}

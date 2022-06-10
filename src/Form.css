@@ -1,6 +1,11 @@
-.box{
+.Form .box{
     align-items: center;
     display: flex;
     justify-content: center;
     height: 150px;
+}
+
+.Form .box input{
+    background-color: antiquewhite;
+    height: 50px;
 }
